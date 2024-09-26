@@ -47,10 +47,10 @@
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band height="112">
-				<element kind="subreport" uuid="a9004b90-9ab8-45b8-97fd-c124fa972878" x="50" y="0" width="741" height="76">
+			<band height="197">
+				<element kind="subreport" uuid="a9004b90-9ab8-45b8-97fd-c124fa972878" x="50" y="0" width="741" height="197">
 					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-					<expression><![CDATA["reports/Blank_A4_4.jasper"]]></expression>
+					<expression><![CDATA["src/main/resources/reports/Blank_A4_4.jasper"]]></expression>
 					<parameter name="student_id">
 						<expression><![CDATA[$F{id}]]></expression>
 					</parameter>
