@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+              http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="studentReport" pageWidth="595" pageHeight="842" columnWidth="555"
+              leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="550e8400-e29b-41d4-a716-446655440000"
+>
+
+<queryString>
+<![CDATA[]]>
+</queryString>
+
+        <!-- Define fields corresponding to your entity -->
+<field name="firstName" class="java.lang.String"/>
+<field name="lastName" class="java.lang.String"/>
+<field name="email" class="java.lang.String"/>
+
+        <!-- Title of the report -->
+<title>
+<band height="50">
+    <textField>
+        <reportElement x="0" y="0" width="300" height="30"/>
+        <textFieldExpression><![CDATA["Student Report"]]></textFieldExpression>
+    </textField>
+</band>
+</title>
+
+        <!-- Detail section to display student data -->
+<detail>
+<band height="20">
+    <textField>
+        <reportElement x="0" y="0" width="100" height="20"/>
+        <textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+    </textField>
+    <textField>
+        <reportElement x="150" y="0" width="100" height="20"/>
+        <textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
+    </textField>
+    <textField>
+        <reportElement x="300" y="0" width="200" height="20"/>
+        <textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+    </textField>
+</band>
+</detail>
+        </jasperReport>
