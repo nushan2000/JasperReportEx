@@ -30,7 +30,7 @@ public class ReportsService {
 
     public byte[] generateStudentReport() throws JRException {
         // Load and compile main and subreports
-        JasperReport mainReport = JasperCompileManager.compileReport(getResourceStream("/reports/Cherry_Landscape_2.jrxml"));
+        JasperReport mainReport = JasperCompileManager.compileReport(getResourceStream("/reports/Blank_A4_8.jrxml"));
         JasperReport subReport = JasperCompileManager.compileReport(getResourceStream("/reports/Blank_A4_4.jrxml"));
 
         // Fetch data from the database

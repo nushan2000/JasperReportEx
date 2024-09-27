@@ -1,0 +1,152 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="Blank_A4_8" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3ab8e117-29fe-4463-8cc0-11aacbf9d552">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<dataset name="Dataset1" uuid="9185b94c-8fcd-4630-a4a0-da409c486b71">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+		<query language="SQL"><![CDATA[select * from studentdb.student
+]]></query>
+		<field name="id" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.name" value="id"/>
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+		</field>
+		<field name="email" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="email"/>
+			<property name="com.jaspersoft.studio.field.label" value="email"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+		</field>
+		<field name="first_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="first_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="first_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+		</field>
+		<field name="last_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="last_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="last_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+		</field>
+		<group name="id">
+			<expression><![CDATA[$F{id}]]></expression>
+		</group>
+	</dataset>
+	<query language="SQL"><![CDATA[select * from studentdb.student]]></query>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="first_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="first_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="first_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="last_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="last_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch"/>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch"/>
+	<detail>
+		<band height="271" splitType="Stretch">
+			<element kind="component" uuid="3b9a5dd4-e5cf-4556-a2e7-3c28eaedbe89" x="0" y="35" width="524" height="200">
+				<component kind="table">
+					<datasetRun uuid="45244412-07c0-4f01-a7a3-e983c17d6dac" subDataset="Dataset1">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<column kind="single" uuid="76f1d58e-ea18-4927-abb2-3a39885bfed5" width="131">
+						<columnHeader height="30" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="dbae38ab-20a1-401f-9456-6b2ac235fde9" x="0" y="0" width="131" height="30">
+								<text><![CDATA[id]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="a789e6ce-e443-46ec-a1e0-50f8d1840347" x="0" y="0" width="131" height="30">
+								<expression><![CDATA[$F{id}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+					</column>
+					<column kind="single" uuid="ced73679-b5fe-413c-87f8-92d3abd6192f" width="131">
+						<columnHeader height="30" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="240bdf09-d371-48ec-ad08-9fe11e4ab671" x="0" y="0" width="131" height="30">
+								<text><![CDATA[email]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="3bd85ed6-306b-448c-81cc-7408564a29aa" x="0" y="0" width="131" height="30">
+								<expression><![CDATA[$F{email}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+					</column>
+					<column kind="single" uuid="112404b3-e9b5-4d4c-8a0a-b1b8d99d31dc" width="131">
+						<columnHeader height="30" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="2c0647cf-ea18-46c4-9b66-ca485d79cfe5" x="0" y="0" width="131" height="30">
+								<text><![CDATA[first_name]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="fcb2ea89-5570-4943-85c8-cf2c237dfeff" x="0" y="0" width="131" height="30">
+								<expression><![CDATA[$F{first_name}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+					</column>
+					<column kind="single" uuid="33796c9a-d214-4cbd-941d-f5e9cfe09723" width="131">
+						<columnHeader height="30" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="b142df24-4292-418e-897c-4bbe7b75930e" x="0" y="0" width="131" height="30">
+								<text><![CDATA[last_name]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" rowSpan="1" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="14fb629a-3f25-4712-b909-0b44e6981cd5" x="0" y="0" width="131" height="30">
+								<expression><![CDATA[$F{last_name}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
