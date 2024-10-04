@@ -1,0 +1,232 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0  -->
+<jasperReport name="jobsheet_sub" language="java" columnCount="1" pageWidth="555" pageHeight="839" orientation="Landscape" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="93ba3244-936e-4f74-80c4-ae6b7bd59d9e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Fms"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="mm"/>
+	<parameter name="shop_id" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[SELECT * 
+FROM  JOB_SHEET_REGISTER_SUBORDER
+JOIN STORES ON  JOB_SHEET_REGISTER_SUBORDER.shop_id=STORES.id
+ WHERE STORES.Code = $P{shop_id} ]]></query>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="Date" class="java.time.LocalDateTime">
+		<property name="com.jaspersoft.studio.field.name" value="Date"/>
+		<property name="com.jaspersoft.studio.field.label" value="Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Description"/>
+		<property name="com.jaspersoft.studio.field.label" value="Description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="shop_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="shop_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="shop_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="job_sheet_register_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="job_sheet_register_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="job_sheet_register_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="Approve" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="Approve"/>
+		<property name="com.jaspersoft.studio.field.label" value="Approve"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="CreatedUser" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="CreatedUser"/>
+		<property name="com.jaspersoft.studio.field.label" value="CreatedUser"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="DateCreated" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="DateCreated"/>
+		<property name="com.jaspersoft.studio.field.label" value="DateCreated"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="ModifiedUser" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ModifiedUser"/>
+		<property name="com.jaspersoft.studio.field.label" value="ModifiedUser"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="DateModified" class="java.time.LocalDateTime">
+		<property name="com.jaspersoft.studio.field.name" value="DateModified"/>
+		<property name="com.jaspersoft.studio.field.label" value="DateModified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="ApprovedUser" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ApprovedUser"/>
+		<property name="com.jaspersoft.studio.field.label" value="ApprovedUser"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="DateApproved" class="java.time.LocalDateTime">
+		<property name="com.jaspersoft.studio.field.name" value="DateApproved"/>
+		<property name="com.jaspersoft.studio.field.label" value="DateApproved"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register_suborder"/>
+	</field>
+	<field name="COLUMN_13" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="Code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Code"/>
+		<property name="com.jaspersoft.studio.field.label" value="Code"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="COLUMN_16" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Description"/>
+		<property name="com.jaspersoft.studio.field.label" value="Description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="IsApproved" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="IsApproved"/>
+		<property name="com.jaspersoft.studio.field.label" value="IsApproved"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="COLUMN_18" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="DateCreated"/>
+		<property name="com.jaspersoft.studio.field.label" value="DateCreated"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="COLUMN_19" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="DateModified"/>
+		<property name="com.jaspersoft.studio.field.label" value="DateModified"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="COLUMN_20" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="CreatedUser"/>
+		<property name="com.jaspersoft.studio.field.label" value="CreatedUser"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="COLUMN_21" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ModifiedUser"/>
+		<property name="com.jaspersoft.studio.field.label" value="ModifiedUser"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="IsEnabled" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="IsEnabled"/>
+		<property name="com.jaspersoft.studio.field.label" value="IsEnabled"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="createdDate" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="createdDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="createdDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="modifiedDate" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="modifiedDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="modifiedDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="createdBy" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="createdBy"/>
+		<property name="com.jaspersoft.studio.field.label" value="createdBy"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="modifiedBy" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="modifiedBy"/>
+		<property name="com.jaspersoft.studio.field.label" value="modifiedBy"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="approvedBy" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="approvedBy"/>
+		<property name="com.jaspersoft.studio.field.label" value="approvedBy"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="updatedDate" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="updatedDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="updatedDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<field name="updatedBy" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="updatedBy"/>
+		<property name="com.jaspersoft.studio.field.label" value="updatedBy"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stores"/>
+	</field>
+	<group name="Id">
+		<expression><![CDATA[$F{Id}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<columnHeader height="60" splitType="Stretch">
+		<element kind="staticText" uuid="404fd8be-cff5-4fb2-b17a-601542eca65c" x="0" y="0" width="222" height="30" fontSize="11.0" bold="true">
+			<text><![CDATA[Date]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fa20fdab-68f6-4b1a-8ebd-91e972a60ac4"/>
+			<box topPadding="5" leftPadding="10" bottomPadding="5" rightPadding="5">
+				<leftPen lineWidth="2.0"/>
+				<bottomPen lineWidth="0.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="3597101a-4f29-47ff-b739-f769bf12840c" x="222" y="0" width="111" height="30" fontSize="11.0" bold="true">
+			<text><![CDATA[Description]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ccf6a28f-21fe-4ac8-9e62-1e17ae85cce0"/>
+			<box topPadding="5" leftPadding="10" bottomPadding="5" rightPadding="5">
+				<bottomPen lineWidth="0.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="b798bbc2-7feb-4ad9-a033-139e8efde791" x="333" y="0" width="111" height="30" fontSize="11.0" bold="true">
+			<text><![CDATA[Shop No]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1f77fc70-d602-4613-b6c8-6d084a97c4d2"/>
+			<box topPadding="5" leftPadding="10" bottomPadding="5" rightPadding="5">
+				<bottomPen lineWidth="0.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="3ca4a7ec-8487-4d56-98d0-14b8edc35959" x="444" y="0" width="111" height="30" fontSize="11.0" bold="true">
+			<text><![CDATA[Approve]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="499a5899-376b-4c55-923e-8f10eb6d3582"/>
+			<box topPadding="5" leftPadding="10" bottomPadding="5" rightPadding="5">
+				<bottomPen lineWidth="0.0"/>
+				<rightPen lineWidth="2.0"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="d365678d-eae1-47b6-9a0c-c4d9d1c038dc" x="0" y="30" width="222" height="30">
+			<expression><![CDATA[$F{Date}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fa20fdab-68f6-4b1a-8ebd-91e972a60ac4"/>
+			<box topPadding="5" leftPadding="10" bottomPadding="5" rightPadding="5">
+				<leftPen lineWidth="2.0"/>
+				<bottomPen lineWidth="2.0"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="2b2c11d9-f2db-499e-8ea4-8de8b1cb0de8" x="222" y="30" width="111" height="30">
+			<expression><![CDATA[$F{Description}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ccf6a28f-21fe-4ac8-9e62-1e17ae85cce0"/>
+			<box topPadding="5" leftPadding="10" bottomPadding="5" rightPadding="5">
+				<bottomPen lineWidth="2.0"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="cf9a4572-2708-4d4f-8cc8-e067dfea0a38" x="333" y="30" width="111" height="30">
+			<expression><![CDATA[$F{Code}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1f77fc70-d602-4613-b6c8-6d084a97c4d2"/>
+			<box topPadding="5" leftPadding="10" bottomPadding="5" rightPadding="5">
+				<bottomPen lineWidth="2.0"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="65f0bcd3-1ab6-4351-94d0-a2e863c6a859" x="444" y="30" width="111" height="30">
+			<expression><![CDATA[$F{Approve}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="499a5899-376b-4c55-923e-8f10eb6d3582"/>
+			<box topPadding="5" leftPadding="10" bottomPadding="5" rightPadding="5">
+				<bottomPen lineWidth="2.0"/>
+				<rightPen lineWidth="2.0"/>
+			</box>
+		</element>
+		<element kind="line" uuid="feb50906-de36-4793-a277-3626650500e4" x="10" y="20" width="490" height="1">
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+	</columnHeader>
+</jasperReport>

@@ -1,0 +1,93 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0  -->
+<jasperReport name="Blank_A4_12" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="344e41de-8785-4acc-948c-c733986cbc4e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Fms"/>
+	<query language="SQL"><![CDATA[ select * from fmsportal.job_sheet_register ]]></query>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register"/>
+	</field>
+	<field name="JobNo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="JobNo"/>
+		<property name="com.jaspersoft.studio.field.label" value="JobNo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register"/>
+	</field>
+	<field name="StartedDate" class="java.time.LocalDateTime">
+		<property name="com.jaspersoft.studio.field.name" value="StartedDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="StartedDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register"/>
+	</field>
+	<field name="PaymentMode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PaymentMode"/>
+		<property name="com.jaspersoft.studio.field.label" value="PaymentMode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register"/>
+	</field>
+	<field name="PaymentNo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PaymentNo"/>
+		<property name="com.jaspersoft.studio.field.label" value="PaymentNo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="job_sheet_register"/>
+	</field>
+	<group name="Id">
+		<expression><![CDATA[$F{Id}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="f346df6c-105f-46d6-841e-288b51e2e141" x="251" y="36" width="100" height="30">
+			<text><![CDATA[Static Text]]></text>
+		</element>
+		<element kind="staticText" uuid="0981ff1d-2188-4305-bf07-5ee924c72ddf" x="420" y="10" width="100" height="30">
+			<text><![CDATA[Static Text]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="12619198-0b9f-47e9-a92c-3ab51e5b337f" x="0" y="0" width="111" height="30">
+			<text><![CDATA[Id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0e9e9e85-2415-4a13-9c75-5353b6f6347b"/>
+		</element>
+		<element kind="staticText" uuid="e63fad0d-d46b-4450-9a2f-630059732f99" x="111" y="0" width="111" height="30">
+			<text><![CDATA[JobNo]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec134691-3c6f-43c4-9233-af0546093c14"/>
+		</element>
+		<element kind="staticText" uuid="933817e9-db55-4b25-b1fe-b3001841fdbb" x="222" y="0" width="111" height="30">
+			<text><![CDATA[StartedDate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cca3d53b-691a-4f2d-9dee-b5e3b27b1bb6"/>
+		</element>
+		<element kind="staticText" uuid="ef7e464a-0efc-40bb-8fba-eaed55d53250" x="333" y="0" width="111" height="30">
+			<text><![CDATA[PaymentMode]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="15720fee-6911-49cd-9baa-cfff84273593"/>
+		</element>
+		<element kind="staticText" uuid="7ffeaa93-1bba-41b6-8388-52b49b51e006" x="444" y="0" width="111" height="30">
+			<text><![CDATA[PaymentNo]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f4c2f248-e94b-47aa-8d04-e4e887a6c598"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<element kind="textField" uuid="4fc3eb8a-c03b-4cb3-a986-7ed3f326a822" x="0" y="0" width="111" height="30">
+				<expression><![CDATA[$F{Id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0e9e9e85-2415-4a13-9c75-5353b6f6347b"/>
+			</element>
+			<element kind="textField" uuid="ca4904b2-ad3b-4bb7-94c2-534cb5ca1aed" x="111" y="0" width="111" height="30">
+				<expression><![CDATA[$F{JobNo}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec134691-3c6f-43c4-9233-af0546093c14"/>
+			</element>
+			<element kind="textField" uuid="cd5c80dc-8348-43d9-b43a-72fe9609ec08" x="222" y="0" width="111" height="30">
+				<expression><![CDATA[$F{StartedDate}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cca3d53b-691a-4f2d-9dee-b5e3b27b1bb6"/>
+			</element>
+			<element kind="textField" uuid="a18c5dbb-9fb6-440f-91e9-a01c609b5f4d" x="333" y="0" width="111" height="30">
+				<expression><![CDATA[$F{PaymentMode}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="15720fee-6911-49cd-9baa-cfff84273593"/>
+			</element>
+			<element kind="textField" uuid="e3ebe82e-886b-4cf6-947e-499d995a289a" x="444" y="0" width="111" height="30">
+				<expression><![CDATA[$F{PaymentNo}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f4c2f248-e94b-47aa-8d04-e4e887a6c598"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

@@ -30,8 +30,8 @@ public class ReportsService {
 
     public byte[] generateStudentReport() throws JRException {
         // Load and compile main and subreports
-        JasperReport mainReport = JasperCompileManager.compileReport(getResourceStream("/reports/Cherry_Landscape_2.jrxml"));
-        JasperReport subReport = JasperCompileManager.compileReport(getResourceStream("/reports/Blank_A4_4.jrxml"));
+        JasperReport mainReport = JasperCompileManager.compileReport(getResourceStream("/reports/jobsheet2.jrxml"));
+        JasperReport subReport = JasperCompileManager.compileReport(getResourceStream("/reports/jobsheet_sub.jrxml"));
 
         // Fetch data from the database
         List<Student> students = studentRepository.findAll();
@@ -60,7 +60,6 @@ public class ReportsService {
                 // Fill the main report with the student data source
                 JasperPrint jasperPrint = JasperFillManager.fillReport(mainReport, parameters, studentDataSource);
                 jasperPrints.add(jasperPrint);
-
             }
 
             // Export the first JasperPrint as a byte array
@@ -68,6 +67,26 @@ public class ReportsService {
         } catch (SQLException e) {
             throw new JRException("Failed to get database connection", e);
         }
+    }
+
+    public byte[] generateStudentReportFilter(String studentId,Date startDate, Date endDate) throws JRException, SQLException {
+        // Load the JasperReport template from resources
+
+        JasperReport mainReport = JasperCompileManager.compileReport(getResourceStream("/reports/jobsheet.jrxml"));
+        // Set parameters for the report
+
+
+        // Set parameters for the report
+        Map<String, Object> params = new HashMap<>();
+        params.put("shop_id", studentId);
+        params.put("Parameter1", studentId); // Use the studentId as a filter
+        params.put("startDate", startDate); // Pass start date
+        params.put("endDate", endDate);
+        // Generate the report with the parameter
+        JasperPrint jasperPrint = JasperFillManager.fillReport(mainReport, params, dataSource.getConnection());
+
+        // Export the report to a byte array (PDF)
+        return JasperExportManager.exportReportToPdf(jasperPrint);
     }
 
     private InputStream getResourceStream(String path) {
